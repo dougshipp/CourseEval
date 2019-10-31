@@ -1,30 +1,26 @@
 function doFirst() {
-    var button = document.getElementById("button");
-    button.addEventListener("click", saveLogin, false);
+    document.getElementById("button").addEventListener("click", validate);
 }
 window.addEventListener("load", doFirst, false);
 
-function saveLogin() {
+function validate() {
     var inputId = document.getElementById("idNum").nodeValue;
     var inputCourse = document.getElementById("inputGroupSelect01").nodeValue;
-    sessionStorage.setItem(inputId, inputCourse);
-}
-
-function checkLogin(Courses) {
-    var id = sessionStorage.getItem(inputId);
-    
-    
+    console.log(inputId);
+    console.log(inputCourse);
+    console.log("Done");
 }
 
 
-function Student(studentId, courses, evalId, status) {
+function Student(studentId, courses, evalId, status) 
+{
     this.studentId = studentId;
     this.courses = courses;
     this.evalId = evalId;
     this.status = status;
 }
 
-var Courses = {
+
     course1 = {
         classRoster: ["123456"]
     },
@@ -34,5 +30,4 @@ var Courses = {
     course3 = {
         classRoster: ["111111"]
     }
-}
 
