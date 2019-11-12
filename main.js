@@ -6,17 +6,18 @@ window.addEventListener("load", doFirst, false);
 async function fetchCourses(inputId) 
 {
         const response = await sendData('/api/courses', {inputId});
+        document.getElementById("courses").
         console.log(response);
 } 
     
     async function sendData(url, data) {
         const response = await fetch(url,
             {
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     "content-type": "application/json"
                 },
-                body: JSON.stringify(data)
+                //body: JSON.stringify(data)
             }
         );
         return await response.json();
