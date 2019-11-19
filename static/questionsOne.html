@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kalamazoo College Course Evaluation </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="questions.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </head>
+
+    <style>
+    body {background-color: orange;}
+    </style>
+    <body>    
+
+        <!-- Navigation Bar and header -->
+        <nav class="navbar navbar-expand-md navbar-custom"> 
+            <a class="navbar-brand" href="#">
+                <img src="img/KCollegeLogo.png" >
+           </a>
+            <span class="navbar-text">Kalamazoo College Course Evaluation</span>
+       </nav> 
+
+    </br>
+    </br>
+       <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                
+              
+              </div>
+              <div class="col-sm-6" >
+                <!--<form action="api/finishedResponse" method="POST">-->
+                <div class="text-center">
+                <h3>In this course, I gained a deeper understanding of the subject</h3></br>
+                </div>
+                    <div class="radio">
+                            <label><input type="radio" name="optradio1" id="saq1" value="5">Strongly Agree</label>
+                    </div>
+                        
+                    <div class="radio">
+                            <label><input type="radio" name="optradio1" id="aq1" value="4">Agree</label>
+                    </div>
+
+                    <div class="radio">
+                            <label><input type="radio" name="optradio1" id="nq1" value="3">Neutral</label>
+                    </div>
+
+                    <div class="radio">
+                            <label><input type="radio" name="optradio1" id="dq1" value="2">Disagree</label>
+                    </div>
+                        
+                    <div class="radio">
+                            <label><input type="radio" name="optradio1" id="sdq1" value="1">Strongly Disagree</label>
+                    </div>
+
+                </br></br>
+
+
+                <div class="text-center">
+                        <h3>In this course, I gained the ability to think critically about course subject matter</h3></br>
+                        </div>
+                        <div>
+                            <div class="radio">
+                                    <label><input type="radio" name="optradio2" id="saq2" value="5">Strongly Agree</label></br>
+                                    <label><input type="radio" name="optradio2" id="aq2" value="4">Agree</label></br>                            
+                                    <label><input type="radio" name="optradio2" id="nq2" value="3">Neutral</label></br>                          
+                                    <label><input type="radio" name="optradio2" id="dq2" value="2">Disagree</label></br>                          
+                                    <label><input type="radio" name="optradio2" id="sdq2" value="1">Strongly Disagree</label></br>
+                            </div>
+                        </div>
+                        
+
+                </br></br>
+
+                <div class="text-center">
+                        <h3>In this course, I gained a new or increased interest in this subject</h3></br>
+                        </div>
+                        <div class="radio">
+                                <label><input type="radio" name="optradio3" id="saq3" value="5">Strongly Agree</label></br>
+                                <label><input type="radio" name="optradio3" id="aq3" value="4">Agree</label></br>                            
+                                <label><input type="radio" name="optradio3" id="nq3" value="3"> Neutral</label></br>                          
+                                <label><input type="radio" name="optradio3" id="dq3" value="2">Disagree</label></br>                          
+                                <label><input type="radio" name="optradio3" id="sdq3" value="1">Strongly Disagree</label>
+                        </div>
+
+                </br></br>
+
+
+                    <script>
+                        function firstQuestion()
+                        {
+                            if (document.getElementById('saq1').checked)
+                            {
+                                a1 = document.getElementById('saq1').value;
+                            }
+                            else if (document.getElementById('aq1').checked)
+                            {
+                                a1 = document.getElementById('aq1').value;
+                            }
+                            else if (document.getElementById('nq1').checked)
+                            {
+                                a1 = document.getElementById('nq1').value;
+                            }
+                            else if (document.getElementById('dq1').checked)
+                            {
+                                a1 = document.getElementById('dq1').value;
+                            }
+                            else if (document.getElementById('sdq1').checked)
+                            {
+                                a1 = document.getElementById('sdq1').value;
+                            }
+                            else 
+                            {
+                                a1=" ";
+                            }               
+                            //document.write(a1);
+                            return a1;
+                        }
+
+                        function secondQuestion()
+                        {
+                            if (document.getElementById('saq2').checked)
+                            {
+                                a2 = document.getElementById('saq2').value;
+                            }
+                            else if (document.getElementById('aq2').checked)
+                            {
+                                a2 = document.getElementById('aq2').value;
+                            }
+                            else if (document.getElementById('nq2').checked)
+                            {
+                                a2 = document.getElementById('nq2').value;
+                            }
+                            else if (document.getElementById('dq2').checked)
+                            {
+                                a2 = document.getElementById('dq2').value;
+                            }
+                            else if (document.getElementById('sdq2').checked)
+                            {
+                                a2 = document.getElementById('sdq2').value;
+                            }
+                            else 
+                            {
+                                a2=" ";
+                            }                        
+                            return a2;
+                        }
+
+                        function thirdQuestion()
+                        {
+                            if (document.getElementById('saq3').checked)
+                            {
+                                a3 = document.getElementById('saq3').value;
+                            }
+                            else if (document.getElementById('aq3').checked)
+                            {
+                                a3 = document.getElementById('aq3').value;
+                            }
+                            else if (document.getElementById('nq3').checked)
+                            {
+                                a3 = document.getElementById('nq3').value;
+                            }
+                            else if (document.getElementById('dq3').checked)
+                            {
+                                a3 = document.getElementById('dq3').value;
+                            }
+                            else if (document.getElementById('sdq3').checked)
+                            {
+                                a3 = document.getElementById('sdq3').value;
+                            }
+                            else 
+                            {
+                                a3=" ";
+                            }                         
+                            return a3;
+                        }
+
+                        function results()
+                        {
+                            document.write(a1);
+                            document.write(a2);
+                            document.write(a3);
+                        }
+                    </script>
+
+
+                <!-- <button onclick="firstQuestion()" class="btn btn-secondary">View Results</button>  -->
+                  <!--<button onclick="combineQuestions()" class="btn btn-secondary">View Results</button> -->
+                <button type="button" class="btn btn-success" id="submit" onclick="combineQuestions()">Submit</button>
+ 
+                
+
+
+                            
+
+
+                </form>
+
+                </div>
+
+            </div>
+            <div class="col-sm-3">
+
+            </div>
+
+        </div>
+            
+    
+      </br>
+
+
+
+
+
+
+
+
+
+      </body>
